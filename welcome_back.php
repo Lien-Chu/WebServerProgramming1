@@ -33,8 +33,12 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
         <a href="moment4.php">Moment 4</a>
         <a href="moment5.php">Moment 5</a>
         <a href="moment6.php">Moment 6</a>
+        <a href="leapYear.php">Leap Year</a>
+    <a href="suvery.php">Suvery with new page</a>
+    <a href="suvery2.php">Suvery with same page</a>
         <a href="welcome_back.php" class="active w3-light-green">Welcome Back</a>
         <a href="login_page.php">Login Page</a>
+        <a href="my_birthday_reminder_app.php">Birthday Remander</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>

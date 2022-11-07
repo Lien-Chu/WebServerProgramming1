@@ -53,8 +53,12 @@ if (isset($_SESSION['namn'])) {
   </div>
     <a href="moment5.php">Moment 5</a>
     <a href="moment6.php">Moment 6</a>
+    <a href="leapYear.php">Leap Year</a>
+    <a href="suvery.php">Suvery with new page</a>
+    <a href="suvery2.php">Suvery with same page</a>
     <a href="welcome_back.php">Welcome Back</a>
     <a href="login_page.php">Login Page</a>
+    <a href="my_birthday_reminder_app.php">Birthday Remander</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>

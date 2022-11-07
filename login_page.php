@@ -6,29 +6,17 @@ Kod för att sätta på visning av felmeddelande. Läs mer på https://dbwebb.se
 error_reporting(-1);              // Report all type of errors
 ini_set('display_errors', 1);     // Display all errors 
 ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
+?>
 
+<?php
 session_start();   // Session starts with the help of this function 
 if (isset($_SESSION['use']))   // Checking whether the session is already there or not 
-// True header redirect to the home page directly 
+// True header redirect to the secret page directly 
 {
-    header("Location:home.php");
-}
-
-if (isset($_POST['login']))   // Checking whether the user clicked login button or not 
-{
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
-
-    if ($user == "vicky" && $pass == "1234")  // Username is set to "vicky" and password is set to 1234 by default     
-    {
-        $_SESSION['use'] = $user;
-        // On Successful Login redirects to home.php
-        echo '<script type="text/javascript"> window.open("home.php","_self");</script>';
-    } else {
-        echo "invalid UserName or Password";
-    }
+    header("Location:secret_page.php");
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -55,8 +43,12 @@ if (isset($_POST['login']))   // Checking whether the user clicked login button 
         <a href="moment4.php">Moment 4</a>
         <a href="moment5.php">Moment 5</a>
         <a href="moment6.php">Moment 6</a>
+        <a href="leapYear.php">Leap Year</a>
+    <a href="suvery.php">Suvery with new page</a>
+    <a href="suvery2.php">Suvery with same page</a>
         <a href="welcome_back.php">Welcome Back</a>
         <a href="login_page.php" class="active w3-green">Login Page</a>
+        <a href="my_birthday_reminder_app.php">Birthday Remander</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -75,8 +67,30 @@ if (isset($_POST['login']))   // Checking whether the user clicked login button 
         </div>
         <div class="w3-third">
             <h3 class="w3-text-teal"></h3>
-            <div class="w3-padding-large w3-border w3-hover-border-aqua">
+            <div class="w3-padding-large w3-border w3-hover-border-green">
                 <form action="" method="post">
+                    <?php
+                    // Checking whether the user clicked login button or not 
+                    if (isset($_POST['login'])) {
+
+                        // Get and set variables from from's input
+                        $user = $_POST['user'];
+                        $pass = $_POST['pass'];
+
+                        // Check if user and password are equal to default   
+                        if ($_POST['user'] == "vicky" && $_POST['pass'] == "1234") {
+
+                            // Set $_SESSION variables
+                            $_SESSION['use'] = "vicky";
+                            $_SESSION['pass'] =  "1234";
+
+                            // On Successful Login redirects to secret_page.php
+                            echo '<script type="text/javascript"> window.open("secret_page.php","_self");</script>';
+                        } else {
+                            echo "<br>invalid UserName or Password<br><br>";
+                        }
+                    }
+                    ?>
                     <label> User Name:</label><br>
                     <input type="text" name="user" placeholder="vicky"> <br><br>
                     <label> Password: </label><br>

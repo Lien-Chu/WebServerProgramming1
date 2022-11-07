@@ -6,7 +6,9 @@ Kod för att sätta på visning av felmeddelande. Läs mer på https://dbwebb.se
 error_reporting(-1);              // Report all type of errors
 ini_set('display_errors', 1);     // Display all errors 
 ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
+?>
 
+<?php
 session_start();   // Session starts with the help of this function 
 ?>
 <!doctype html>
@@ -15,7 +17,7 @@ session_start();   // Session starts with the help of this function
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Hidden Page</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
