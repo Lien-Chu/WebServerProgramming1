@@ -51,7 +51,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 
   <div class="w3-padding-large w3-container">
     <div class="w3-third">
-      <h3 class="w3-text-cyan"></h3>
+      <h3 class="w3-text-yellow"></h3>
       <div class="w3-padding-large ">
       </div>
     </div>
@@ -134,7 +134,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
       }
       ?>
       <h3 class="w3-text-cyan"></h3>
-      <div class="w3-padding-large w3-border w3-hover-border-aqua">
+      <div class="w3-padding-large w3-border w3-hover-border-yellow">
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>#formresult">
           <fieldset>
             <legend>Contact details</legend>
@@ -179,7 +179,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
     </div>
     <div class="w3-third">
       <h3 class="w3-text-cyan"></h3>
-      <div class="w3-padding-large">
+      <div class="w3-padding-large w3-border w3-hover-border-yellow">
         <fieldset>
           <?php
           echo "<h4><b>Your Input will be displayed here!:</b></h4>";

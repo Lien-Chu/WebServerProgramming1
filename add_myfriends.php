@@ -232,7 +232,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
                     <span class="error">* <?php echo $congratulateWithErr; ?></span>
                     <br><br>
                     <input type="submit" name="submit" value="Add">
-                    <button><a href="my_birthday_reminder_app.php">Check result</a></button>
+                    <button><a href="my_birthday_reminder_app.php" style="text-decoration:none;">Check result</a></button>
 
                 </form>
             </div>

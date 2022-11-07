@@ -34,7 +34,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
     <a href="moment6.php">Moment 6</a>
     <a href="leapYear.php">Leap Year</a>
     <a href="suvery.php" class="active w3-yellow ">Suvery with new page</a>
-    <a href="suvery2.php" class="">Suvery with same page</a>
+    <a href="suvery2.php">Suvery with same page</a>
     <a href="welcome_back.php">Welcome Back</a>
     <a href="login_page.php">Login Page</a>
     <a href="my_birthday_reminder_app.php">Birthday Reminder</a>
@@ -51,7 +51,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 
   <div class="w3-padding-large w3-container">
     <div class="w3-third">
-      <h3 class="w3-text-cyan"></h3>
+      <h3 class="w3-text-yellow"></h3>
       <div class="w3-padding-large ">
       </div>
     </div>
@@ -134,7 +134,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
       }
       ?>
       <h3 class="w3-text-cyan"></h3>
-      <div class="w3-padding-large w3-border w3-hover-border-aqua">
+      <div class="w3-padding-large w3-border w3-hover-border-yellow">
         <form method="post" action="suvery-data.php">
           <fieldset>
             <legend>Contact details</legend>

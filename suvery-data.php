@@ -13,19 +13,15 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Suvery Data</title>
+    <title>Moment 1</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Notera att sökvägen blir annorlunda när du länkar in egen styling och script. 
-    ".." innebär att du går upp till katalogen ovanför-->
-    <link rel="stylesheet" href="../exempelkod/style/jqueryui.css">
-    <link rel="stylesheet" href="../exempelkod//style/myCustom.css">
+    <link rel="stylesheet" href="myStyle/myCustom.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!--Notera att sökvägen blir annorlunda när du länkar in egen styling och script. 
-    ".." innebär att du går upp till katalogen ovanför-->
-    <script src="../exempelkod/script/jqueryui.js"></script>
+    <script src="script/jqueryui.js"></script>
+    <script src="script/myScript.js"></script>
 </head>
 
 <body>
@@ -36,9 +32,12 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
         <a href="moment4.php">Moment 4</a>
         <a href="moment5.php">Moment 5</a>
         <a href="moment6.php">Moment 6</a>
-        <a href="LeapYear.php" >Leap Year</a>
-    <a href="suvery.php" class="active w3-yellow ">Suvery with new page</a>
-    <a href="suvery2.php">Suvery with same page</a>
+        <a href="leapYear.php">Leap Year</a>
+        <a href="suvery.php"  class="active w3-yellow">Suvery with new page</a>
+        <a href="suvery2.php">Suvery with same page</a>
+        <a href="welcome_back.php">Welcome Back</a>
+        <a href="login_page.php">Login Page</a>
+        <a href="my_birthday_reminder_app.php">Birthday Reminder</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -53,12 +52,12 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
     <div class="w3-padding-large w3-container">
 
         <div class="w3-third">
-            <h3 class="w3-text-cyan"></h3>
+            <h3 class="w3-text-yellow"></h3>
             <div class="w3-padding-large ">
             </div>
         </div>
         <div class="w3-third">
-            <h3 class="w3-text-cyan">Suvery-data</h3>
+            <h3 class="w3-text-yellow">Suvery-data</h3>
             <div class="w3-padding-large">
                 <fieldset>
                     <?php
@@ -74,7 +73,8 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
                     echo "[favouriteCity] ", $_POST["favouriteCity"];
                     ?>
                 </fieldset>
-                <a href="suvery.php">Back to sender page</a>
+                <br>
+                <button><a href="suvery.php" style="text-decoration:none;">Back to sender page</a></button>
             </div>
         </div>
         <div class="w3-third">

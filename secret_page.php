@@ -37,8 +37,12 @@ session_start();   // Session starts with the help of this function
         <a href="moment4.php">Moment 4</a>
         <a href="moment5.php">Moment 5</a>
         <a href="moment6.php">Moment 6</a>
+        <a href="leapYear.php">Leap Year</a>
+        <a href="suvery.php">Suvery with new page</a>
+        <a href="suvery2.php">Suvery with same page</a>
         <a href="welcome_back.php">Welcome Back</a>
         <a href="login_page.php">Login Page</a>
+        <a href="my_birthday_reminder_app.php">Birthday Reminder</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -57,7 +61,7 @@ session_start();   // Session starts with the help of this function
         </div>
         <div class="w3-third">
             <h3 class="w3-text-teal"></h3>
-            <div class="w3-padding-large w3-border w3-hover-border-aqua">
+            <div class="w3-padding-large w3-border w3-hover-border-orange">
                 <?php
                 if (!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
                 {
@@ -68,7 +72,7 @@ session_start();   // Session starts with the help of this function
                 echo $_SESSION['use'];
                 echo "! Your Secret is Safe With Us!!<br><br>";
                 // Set a link to access logout.php    
-                echo "<a href='logout.php'> Logout</a> ";
+                echo "<button><a href='logout.php'style='text-decoration:none;'> Logout</a></button> ";
                 ?>
                 <div class="w3-third">
                     <h3 class="w3-text-teal"></h3>

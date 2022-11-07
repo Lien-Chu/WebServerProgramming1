@@ -105,9 +105,9 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
             echo "</table>";
             ?>
             <br>
-            <button><a href="add_myfriends.php">Add</a></button>
-            <button><a href="update_myfriends.php">Update</a></button>
-            <button><a href="delete_myfriends.php">Delete</a></button>
+            <button><a href="add_myfriends.php" style="text-decoration:none;">Add</a></button>
+            <button><a href="update_myfriends.php" style="text-decoration:none;">Update</a></button>
+            <button><a href="delete_myfriends.php" style="text-decoration:none;">Delete</a></button>
         </div>
     </div>
 </body>

@@ -220,7 +220,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
                     <br> <br>
                     <input type="submit" name="find" value="Find">
                     <input type="submit" name="delete" value="Delete">
-                    <button><a href="my_birthday_reminder_app.php">Check Result</a></button>
+                    <button><a href="my_birthday_reminder_app.php" style="text-decoration:none;">Check Result</a></button>
 
                 </form>
             </div>

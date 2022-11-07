@@ -57,7 +57,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
         </div>
         <div class="w3-third">
             <h3 class="w3-text-teal"></h3>
-            <div class="w3-padding-large w3-border w3-hover-border-aqua">
+            <div class="w3-padding-large w3-border w3-hover-border-green">
                 <?php
                 if (isset($_REQUEST["user_name"])) {
                     setcookie("stored_user_name", $_REQUEST["user_name"], time() + 3600, "/");   // Cookie set to expire in 1 hour
