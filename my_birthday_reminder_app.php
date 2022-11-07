@@ -38,7 +38,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
         <a href="suvery2.php">Suvery with same page</a>
         <a href="welcome_back.php">Welcome Back</a>
         <a href="login_page.php">Login Page</a>
-        <a href="my_birthday_reminder_app.php" class="active w3-pale-red">Birthday Remander</a>
+        <a href="my_birthday_reminder_app.php" class="active w3-pale-red">Birthday Reminder</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -50,70 +50,66 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
     </div>
     </div>
     <div class="w3-padding-large w3-container">
-        <div class="w3-half">
-            <h3><a name="formresult">DB and Forms</a></h3>
-            <div class="w3-padding-large w3-border w3-hover-border-pale-red">
-                <p><b><a name="formresult">Order By Lastname</a></b></p>
-                <?php
-                echo "<table class = 'w3-table w3-table-all'>";
-                echo "<tr class ='w3-pale-red'><th>id</th><th>First name</th>
+
+        <h3><a name="formresult">List of myfirends</a></h3>
+        <div class="w3-padding-large w3-border w3-hover-border-pale-red">
+            <p><b><a name="formresult">Order By Lastname</a></b></p>
+            <?php
+            echo "<table class = 'w3-table w3-table-all'>";
+            echo "<tr class ='w3-pale-red'><th>id</th><th>First name</th>
                     <th>Last name</th><th>Birthday</th><th>Congratulate with</th> </tr>";
 
-                class TableRows extends RecursiveIteratorIterator
+            class TableRows extends RecursiveIteratorIterator
+            {
+                function __construct($it)
                 {
-                    function __construct($it)
-                    {
-                        parent::__construct($it, self::LEAVES_ONLY);
-                    }
-
-                    function current()
-                    {
-                        return "<td style='width:150px;border:1px solid black;'>" . parent::current() . "</td>";
-                    }
-
-                    function beginChildren()
-                    { //Här kan du få ett felaktigt felmeddelande
-                        echo "<tr>";
-                    }
-
-                    function endChildren()
-                    { //Här kan du få ett felaktigt felmeddelande
-                        echo "</tr>" . "\n";
-                    }
+                    parent::__construct($it, self::LEAVES_ONLY);
                 }
 
-                $servername = "localhost";
-                $username = "vicky";
-                $password = "1234";
-                $dbname = "my_birthday_reminder_app";
-
-                try {
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $stmt = $conn->prepare("SELECT id, First_name, Last_name, Birthday,Congratulate_with FROM myfriends ORDER BY Last_name");
-                    $stmt->execute();
-
-                    // set the resulting array to associative
-                    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-                    foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
-                        echo $v;
-                    }
-                } catch (PDOException $e) {
-                    echo "Error: " . $e->getMessage();
+                function current()
+                {
+                    return "<td style='width:150px;'>" . parent::current() . "</td>";
                 }
-                $conn = null;
-                echo "</table>";
-                ?>
-                <br>
-                <button><a href="add_myfriends.php">Add</a></button>
-                <button><a href="update_myfriends.php">Update</a></button>
-                <button><a href="delete_myfriends.php">Delete</a></button>
-            </div>
+
+                function beginChildren()
+                { //Här kan du få ett felaktigt felmeddelande
+                    echo "<tr>";
+                }
+
+                function endChildren()
+                { //Här kan du få ett felaktigt felmeddelande
+                    echo "</tr>" . "\n";
+                }
+            }
+
+            $servername = "localhost";
+            $username = "vicky";
+            $password = "1234";
+            $dbname = "my_birthday_reminder_app";
+
+            try {
+                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $conn->prepare("SELECT id, First_name, Last_name, Birthday,Congratulate_with FROM myfriends ORDER BY Last_name");
+                $stmt->execute();
+
+                // set the resulting array to associative
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                foreach (new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
+                    echo $v;
+                }
+            } catch (PDOException $e) {
+                echo "Error: " . $e->getMessage();
+            }
+            $conn = null;
+            echo "</table>";
+            ?>
+            <br>
+            <button><a href="add_myfriends.php">Add</a></button>
+            <button><a href="update_myfriends.php">Update</a></button>
+            <button><a href="delete_myfriends.php">Delete</a></button>
         </div>
-
-
     </div>
-
 </body>
 
 </html>

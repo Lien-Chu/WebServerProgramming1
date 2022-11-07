@@ -58,7 +58,7 @@ if (isset($_SESSION['namn'])) {
     <a href="suvery2.php">Suvery with same page</a>
     <a href="welcome_back.php">Welcome Back</a>
     <a href="login_page.php">Login Page</a>
-    <a href="my_birthday_reminder_app.php">Birthday Remander</a>
+    <a href="my_birthday_reminder_app.php">Birthday Reminder</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>

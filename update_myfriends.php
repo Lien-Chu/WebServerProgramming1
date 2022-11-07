@@ -13,7 +13,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Moment 1</title>
+    <title>Update Data My Birthday Reminder</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,9 +32,12 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
         <a href="moment4.php">Moment 4</a>
         <a href="moment5.php">Moment 5</a>
         <a href="moment6.php">Moment 6</a>
+        <a href="leapYear.php">Leap Year</a>
+        <a href="suvery.php">Suvery with new page</a>
+        <a href="suvery2.php">Suvery with same page</a>
         <a href="welcome_back.php">Welcome Back</a>
         <a href="login_page.php">Login Page</a>
-        <a href="my_birthday_reminder_app.php" class="active w3-pale-red">Birthday Remander</a>
+        <a href="my_birthday_reminder_app.php" class="active w3-pale-red">Birthday Reminder</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -47,7 +50,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 
     <div class="w3-padding-large w3-container">
     <div class="w3-half">
-            <h3><a name="formresult">DB and Forms</a></h3>
+            <h3><a name="formresult">List of myfirends</a></h3>
             <div class="w3-padding-large w3-border w3-hover-border-pale-red">
                 <p><b><a name="formresult">Order By Lastname</a></b></p>
                 <?php
@@ -64,7 +67,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
 
                     function current()
                     {
-                        return "<td style='width:150px;border:1px solid black;'>" . parent::current() . "</td>";
+                        return "<td style='width:150px;'>" . parent::current() . "</td>";
                     }
 
                     function beginChildren()
@@ -107,9 +110,9 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
         </div>
 
         <div class="w3-half">
-        <h3><a name="formresult">Please fill in the form</a></h3>
+        <h3><a name="formresult">Update Data from myfriends</a></h3>
             <div class="w3-padding-large w3-border w3-hover-border-pale-red">
-                <p><b>Update Data from</b></p>
+                <p><b>Please fill in the form</b></p>
                 <?php
                 $servername = "localhost";
                 $username = "vicky";
